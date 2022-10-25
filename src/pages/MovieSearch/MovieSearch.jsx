@@ -26,6 +26,7 @@ const MovieSearch = () => {
   }
 
   return (  
+    <main className={styles.main}>
     <>
     <h1>Movie Search</h1>
     <form
@@ -50,6 +51,7 @@ const MovieSearch = () => {
     </form>
       <MovieResults movies={results}/>
     </>
+  </main>
   );
 }
 
