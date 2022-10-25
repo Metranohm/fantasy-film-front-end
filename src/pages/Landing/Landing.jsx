@@ -5,7 +5,6 @@ const Landing = () => {
     <>
       <main className={styles.container}>
         <section className={styles.splash}>
-          <img src="https://wallpaperaccess.com/full/1561985.jpg" alt="Movie Theater" />
         </section>
         <section className={styles.about}>
           <header>

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
+import styles from './NavBar.module.css'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
-    <nav>
+    <nav className={styles.container}>
       {user ?
-        <ul>
-          <li>Welcome, {user.name}</li>
+        <ul className={styles.links}>
+          <li className={styles.welcome}>Fantasy Filmmaking</li>
           <li><Link to="/profiles">Profiles</Link></li>
           <li><Link to="/movie-search">Movie Search</Link></li>
           <li><Link to="/actor-search">Actor Search</Link></li>
@@ -14,7 +15,7 @@ const NavBar = ({ user, handleLogout }) => {
           <li><Link to="/change-password">Change Password</Link></li>
         </ul>
       :
-        <ul>
+        <ul className='Login'>
           <li><Link to="/login">Log In</Link></li>
           <li><Link to="/signup">Sign Up</Link></li>
         </ul>
