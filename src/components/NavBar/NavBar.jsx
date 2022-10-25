@@ -6,7 +6,8 @@ const NavBar = ({ user, handleLogout }) => {
     <nav className={styles.container}>
       {user ?
         <ul className={styles.links}>
-          <li className={styles.welcome}>Fantasy Filmmaking</li>
+          <a href="/">
+          <li className={styles.welcome}>Fantasy Filmmaking</li></a>
           <li><Link to="/profiles">Profiles</Link></li>
           <li><Link to="/movie-search">Movie Search</Link></li>
           <li><Link to="/actor-search">Actor Search</Link></li>
