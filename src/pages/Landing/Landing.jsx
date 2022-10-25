@@ -3,9 +3,9 @@ import styles from './Landing.module.css'
 const Landing = () => {
   return (
     <>
-      <main className={styles.container}>
-        <section className={styles.splash}>
-          <img src="https://wallpaperaccess.com/full/1561985.jpg" alt="Movie Theater" />
+      <main>
+        <section>
+          <img id="background" src="https://wallpaperaccess.com/full/1561985.jpg" alt="Movie Theater" />
         </section>
         <section className={styles.about}>
           <header>
@@ -19,8 +19,8 @@ const Landing = () => {
           </article>
         </section>
       </main>
-      <footer className={styles.footer}>
-        <p>© 2022 ALG Productions RIGHTS RESERVED</p>
+      <footer>
+        <p>© 2022 ALG Productions</p>
       </footer>
     </>
   )
