@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  text-align: right;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+  background-color: rgb(168, 40, 40);
+  padding: 15px 5px;
+  display: inline-block;
+  border-width: 100%;
+  border-radius: 40%;
+  color:azure
+}
+
+ul {
+  display: inline-block;
+  background-position: 100%;
+  
+}
+
+.welcome {
+  font-size: 50px;
+  padding: 10px;
+}
+
+.about {
+  background-image: url("https://images.wideopencountry.com/wp-content/uploads/2020/01/14657358754_1371082961_k.jpg");
+  
+}
+/* .container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+} */
