@@ -1,9 +1,9 @@
 import { useState,useEffect } from 'react';
 import * as movieService from '../../services/movieService'
 
-const Cast = ({movieId}) => {
+const Cast = ({movieId, credits, setCredits}) => {
 
-  const [credits, setCredits] = useState([])
+  // const [credits, setCredits] = useState([])
 
   useEffect(() => {
     const fetchCreditDetails = async () => {

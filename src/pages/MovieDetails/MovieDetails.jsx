@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import MovieCard from "../../components/MovieCard/MovieCard"
+import Cast from "../../components/Cast/Cast"
 
 // Services
 import * as movieService from "../../services/movieService"
 
-const MovieDetails = () => {
+const MovieDetails = (props) => {
   const { id } = useParams()
-  const [movie, setMovie] = useState([])
+  const [movie, setMovie] = useState(null)
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -18,14 +20,9 @@ const MovieDetails = () => {
 
   return (
     <main>
-        <header>
-          <h1>{movie.name}</h1>
-          <h2>{movie.actors}</h2>
-          <h3>{movie.image}</h3>
-        </header>
-      <section>
-        <h1>Comments</h1>
-      </section>
+      <h1>Movies</h1>
+      {/* <MovieCard /> */}
+      <Cast />
     </main>
   )
 }

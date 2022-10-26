@@ -27,21 +27,22 @@ const DreamcastDetails = (props) => {
   // if (!dreamcast) return <Loading />
 
   return (
-    <main className={styles.container}>
-      <article>
-        <header>
-          <h3>{dreamcast.category.toUpperCase()}</h3>
-          <h1>{dreamcast.title}</h1>
-          {/* <span>
-            <AuthorInfo content={dreamcast} />
-          </span> */}
-        </header>
-        <p>{dreamcast.text}</p>
-      </article>
-      <section>
-        <h1>Comments</h1>
-      </section>
-    </main>
+    <h1>Working component!</h1>
+    // <main className={styles.container}>
+    //   <article>
+    //     <header>
+    //       <h3>{dreamcast.category.toUpperCase()}</h3>
+    //       <h1>{dreamcast.title}</h1>
+    //       {/* <span>
+    //         <AuthorInfo content={dreamcast} />
+    //       </span> */}
+    //     </header>
+    //     <p>{dreamcast.text}</p>
+    //   </article>
+    //   <section>
+    //     <h1>Comments</h1>
+    //   </section>
+    // </main>
   )
 }
 
