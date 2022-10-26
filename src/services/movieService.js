@@ -32,8 +32,40 @@ export async function credits(movieId) {
   
 }
 
+export async function create(movieData) {
+  try {
+    const res = await fetch(`${BASE_URL}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(movieData)
+    })
+    return res.json()
+    
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-const index = async () => {
+export async function favorite(movieData) {
+  try {
+    const res = await fetch(`${BASE_URL}/favorite`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(movieData)
+    })
+    return res.json()    
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export async function index () {
   try {
     const res = await fetch(BASE_URL, {
       headers: { 'Authorization': `Bearer ${tokenService.getToken()}`}
@@ -44,7 +76,7 @@ const index = async () => {
   }
 }
 
-const show = async (id) => {
+export async function show (id) {
   try {
     const res = await fetch(`${BASE_URL}/${id}`, {
       headers: { "Authorization": `Bearer ${tokenService.getToken()}`}
@@ -53,9 +85,4 @@ const show = async (id) => {
   } catch (error) {
     console.log(error)
   }
-}
-
-export {
-  index,
-  show,
 }

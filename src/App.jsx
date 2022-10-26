@@ -16,6 +16,7 @@ import DreamcastList from './pages/DreamcastList/DreamcastList'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import MovieCard from './components/MovieCard/MovieCard'
 
 // services
 import * as authService from './services/authService'
@@ -97,7 +98,15 @@ const App = () => {
           path="/movie-search"
           element={
             <ProtectedRoute user={user}>
-              <MovieSearch />
+              <MovieSearch profile={profile} setProfile={setProfile}/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/movies/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <MovieCard profile={profile} setProfile={setProfile}/>
             </ProtectedRoute>
           }
         />
