@@ -29,12 +29,12 @@ const MovieResults = ({movies, profile, setProfile}) => {
         movies.map( movie => {
           if (movie.backdrop_path)
           return (
-            <>
+          
               <MovieCard 
               movie={movie} 
               key={movie._id}
               handleAddToFav={handleAddToFav}/> 
-            </>
+          
           )
         })
         :
