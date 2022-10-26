@@ -1,29 +1,41 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import MovieCard from "../../components/MovieCard/MovieCard"
-import Cast from "../../components/Cast/Cast"
+import styles from './MovieDetails.module.css'
+
 
 // Services
-import * as movieService from "../../services/movieService"
+import * as dreamcastService from "../../services/dreamcastService"
 
-const MovieDetails = (props) => {
+const MovieDetails = ({profile}) => {
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
-
+  console.log(profile)
   useEffect(() => {
     const fetchMovie = async () => {
-      const moviedata = await movieService.show(id)
+      const moviedata = await dreamcastService.show(id)
       setMovie(moviedata)
     }
     fetchMovie()
-  }, [id])
+    console.log(movie)
+  },[id])
 
+  if(!movie) return <h1>Loading...</h1>
+  console.log(movie.cast)
   return (
-    <main>
+    <>
       <h1>Movies</h1>
-      {/* <MovieCard /> */}
-      <Cast />
+    <main className={styles.container}>
+      <div className="card" style={{'width': '35rem'}}>
+        <img src={`${movie.image}`} className="card-img-top" alt={`${movie.name}`} style={{'width': '35rem', 'height': '50rem'}}/>
+        <div className="card-body">
+          <h5 className="card-title">{movie.name}</h5>
+          {movie.cast?.map(cast =>(
+            <p  key={cast._id} className="card-text">{cast.character} : {cast.actor?.name}</p>
+          ))}
+        </div>
+      </div>
     </main>
+    </>
   )
 }
 

@@ -106,7 +106,7 @@ const App = () => {
           path="/movies/:id"
           element={
             <ProtectedRoute user={user}>
-              <MovieDetails />
+              <MovieDetails profile={profile}/>
             </ProtectedRoute>
           }
         />
