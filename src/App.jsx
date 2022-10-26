@@ -12,11 +12,12 @@ import ActorSearch from './pages/ActorSearch/ActorSearch'
 import MovieList from './pages/MovieList/MovieList'
 import MovieSearch from './pages/MovieSearch/MovieSearch'
 import DreamcastList from './pages/DreamcastList/DreamcastList'
+import MovieDetails from './pages/MovieDetails/MovieDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
-import MovieCard from './components/MovieCard/MovieCard'
+
 
 // services
 import * as authService from './services/authService'
@@ -86,7 +87,7 @@ const App = () => {
           }
         />
         <Route
-          path="/dreamcasts"
+          path="/dreamcastlist"
           element={
             <ProtectedRoute user={user}>
               <DreamcastList />
@@ -105,7 +106,7 @@ const App = () => {
           path="/movies/:id"
           element={
             <ProtectedRoute user={user}>
-              <MovieCard profile={profile} setProfile={setProfile}/>
+              <MovieDetails />
             </ProtectedRoute>
           }
         />
