@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react"
-import * as actorService from '../../services/actorService'
 
 const ActorCard = ({actor, handleAddToFav, handleDeleteFromFav, favActors}) => {
   const isFavoriteActor = favActors?.includes(actor.id)

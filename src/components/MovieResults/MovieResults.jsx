@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Cast from '../Cast/Cast';
 import styles from './MovieResults.module.css'
 import MovieCard from "../../components/MovieCard/MovieCard";
 import * as movieService from '../../services/movieService'
