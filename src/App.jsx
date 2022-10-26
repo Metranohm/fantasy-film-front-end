@@ -46,7 +46,6 @@ const App = () => {
     }
     if (user) fetchProfile()
   }, [user])
-  console.log(profile);
 
   return (
     <>

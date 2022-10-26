@@ -5,9 +5,7 @@ import * as actorService from '../../services/actorService'
 import styles from './ActorResults.module.css'
 
 const ActorResults = ({actors, profile, setProfile}) => {
-  console.log(profile)
-  const tmdbIDs = profile?.favoriteActors.map(a => a.tmdbID) 
-  console.log(tmdbIDs)
+  const tmdbIDs = profile?.favoriteActors.map(a => a.tmdbID)
 
   const handleAddToFav = async actor => {
     try {
