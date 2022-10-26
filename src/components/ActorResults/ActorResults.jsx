@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import ActorCard from '../ActorCard/ActorCard'
 import * as actorService from '../../services/actorService'
 
