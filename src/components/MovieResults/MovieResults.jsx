@@ -56,6 +56,7 @@ const MovieResults = ({movies, profile, setProfile}) => {
         ]
       }
       const dreamMovie = await dreamcastService.create(setDreamCast)
+      navigate(`/movies/${dreamMovie._id}`)
 
     } catch (err) {
       console.log(err)
@@ -70,8 +71,8 @@ const MovieResults = ({movies, profile, setProfile}) => {
           return (
           
               <MovieCard 
-              movie={movie} 
               key={movie._id}
+              movie={movie} 
               handleAddToFav={handleAddToFav}
               handleDreamCast={handleDreamCast}/> 
             
