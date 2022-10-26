@@ -2,10 +2,7 @@ import { useState, useEffect } from "react"
 import * as actorService from '../../services/actorService'
 
 const ActorCard = ({actor, handleAddToFav, handleDeleteFromFav, favActors}) => {
-  console.log(actor)
   const isFavoriteActor = favActors?.includes(actor.id)
-  console.log(favActors, "favorite actors")
-  
   return (  
     <div className='card' style={{'width' : '24rem'}} >
       <img src={`https://image.tmdb.org/t/p/original${actor.profile_path}`} alt={`${actor.name}`} />
