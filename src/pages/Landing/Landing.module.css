@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("https://www.corneliustoday.com/wp-content/uploads/2021/04/theater-seats.jpg");
+  background-image: url("https://i.postimg.cc/v8C1qf6C/Theater-Image-Psych.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about {
@@ -21,8 +23,8 @@ h1 {
   text-align: center;
   color: rgb(240, 216, 181);
   background-color: black;
-  width: 270px;
+  width: 210px;
   justify-content: center;
   margin: 0 auto;
-  
+
 }
