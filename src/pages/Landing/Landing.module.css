@@ -2,4 +2,27 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-image: url("https://www.corneliustoday.com/wp-content/uploads/2021/04/theater-seats.jpg");
+}
+
+.about {
+  min-height: 100vh;
+}
+
+p {
+  display: flex;
+  color: rgb(240, 216, 181);
+  text-align: center;
+  max-width: 700px;
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(240, 216, 181);
+  background-color: black;
+  width: 270px;
+  justify-content: center;
+  margin: 0 auto;
+  
 }

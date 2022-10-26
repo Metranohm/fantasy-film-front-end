@@ -26,6 +26,7 @@ const MovieSearch = (profile, setProfile) => {
   }
 
   return (  
+    <main className={styles.main}>
     <>
     <h1>Movie Search</h1>
     <form
@@ -50,6 +51,7 @@ const MovieSearch = (profile, setProfile) => {
     </form>
       <MovieResults profile={profile} setProfile={setProfile} movies={results}/>
     </>
+  </main>
   );
 }
 

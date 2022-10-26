@@ -18,9 +18,6 @@ const Landing = () => {
           </article>
         </section>
       </main>
-      <footer className={styles.footer}>
-        <p>© 2022 ALG Productions RIGHTS RESERVED</p>
-      </footer>
     </>
   )
 }
