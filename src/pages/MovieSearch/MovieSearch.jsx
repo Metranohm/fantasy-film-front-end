@@ -48,9 +48,9 @@ const MovieSearch = (profile, setProfile) => {
       <div>
         <button className="btn btn-primary">Search</button>
       </div>
-      <div className={styles.imageDiv}>
+      {/* <div className={styles.imageDiv}>
       <img src="https://i.postimg.cc/wB28nPcf/Red-Film-Strip.png" alt="img"/>
-      </div>
+      </div> */}
     </form>
       <MovieResults profile={profile} setProfile={setProfile} movies={results}/>
     </>
