@@ -5,7 +5,8 @@ const ActorCard = ({actor, handleAddToFav, handleDeleteFromFav, favActors}) => {
     <div className='card' style={{'width' : '24rem'}} >
       <img src={`https://image.tmdb.org/t/p/original${actor.profile_path}`} alt={`${actor.name}`} />
       <div className="card-body d-flex flex-column">
-        <h5 className="card-title">{actor.name}</h5>
+        <h3 className="card-title">{actor.name}</h3>
+        <h6>Known for:</h6>
         <ul className="card-text">
           {actor.known_for.map( known => (
             <li key={known.id}>{known.original_title ? known.original_title : known.name}</li>
