@@ -90,7 +90,7 @@ const App = () => {
           path="/dreamcastlist"
           element={
             <ProtectedRoute user={user}>
-              <DreamcastList />
+              <DreamcastList user={user}/>
             </ProtectedRoute>
           }
         />
