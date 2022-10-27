@@ -12,37 +12,39 @@ import * as dreamcastService from "../../services/dreamcastService.js"
 
 const DreamcastDetails = (props) => {
   const { id } = useParams()
-  const [dreamcast, setDreamcast] = useState(null)
+  const [dreamcasts, setDreamcasts] = useState([])
 
   useEffect(() => {
     const fetchDreamcast = async () => {
-      const data = await dreamcastService.show(id)
-      setDreamcast(data)
+      const allDreamCasts = await dreamcastService.index()
+      setDreamcasts(allDreamCasts)
     }
     fetchDreamcast()
-  }, [id])
-
-  console.log("Styles:", styles);
-
+  }, [])
   // if (!dreamcast) return <Loading />
 
   return (
-    <h1>Working component!</h1>
-    // <main className={styles.container}>
-    //   <article>
-    //     <header>
-    //       <h3>{dreamcast.category.toUpperCase()}</h3>
-    //       <h1>{dreamcast.title}</h1>
-    //       {/* <span>
-    //         <AuthorInfo content={dreamcast} />
-    //       </span> */}
-    //     </header>
-    //     <p>{dreamcast.text}</p>
-    //   </article>
-    //   <section>
-    //     <h1>Comments</h1>
-    //   </section>
-    // </main>
+    <>
+      <h1>Our User Created Dreamcast</h1>
+      <section className={styles.container}>
+        {dreamcasts.map(dreamcast => (
+          <div key={dreamcast._id} className="card" style={{ "width": "35rem" }}>
+            <img src={`${dreamcast.image}`} className="card-img-top" alt={`${dreamcast.name}`} style={{ 'width': '35rem', 'height': '50rem' }} />
+            <div className="card-body">
+              <h2 className="card-title">{dreamcast.name}</h2>
+              {dreamcast.cast?.map(cast => (
+                <div
+                  key={cast._id}
+                >
+                  <p key={cast._id} className="card-text">{cast.character} : {cast.actor?.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    </>
+
   )
 }
 

@@ -49,10 +49,7 @@ const MovieDetails = ({ profile, setProfile }) => {
   }
 
   const replaceActor = async (actor) => {
-    console.log('NEW ACTOR', actor)
-    console.log('OLD ACTOR', selectedCast.actor)
     const res = await dreamcastService.update(movie._id, selectedCast._id, actor)
-    console.log(res)
     setMovie(res)
     setSelectedCast(null)
   }

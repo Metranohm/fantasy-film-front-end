@@ -16,7 +16,7 @@ const Cast = ({movieId, credits, setCredits}) => {
   
   return (  
     <>
-    {credits.length ?
+    {credits?.length ?
       credits.map( (cast,idx) => 
         {if(idx < 6) return <li key={cast.name}>{cast.character} played by {cast.name}</li>} 
       )
