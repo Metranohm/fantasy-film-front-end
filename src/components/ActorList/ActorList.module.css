@@ -1,0 +1,9 @@
+.actorContainer {
+  gap: 14px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 21px;
+  justify-content: center;
+}

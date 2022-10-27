@@ -9,14 +9,15 @@
   overflow: scroll;
 }
 
-.container section{
+.container section {
   width: 50% !important;
   display: flex;
   flex-direction: column;
   /* justify-content: flex-start;
   align-items: center; */
   padding: 0 40px;
-
+  border: 1px solid red;
+  
 }
 
 .container section img {
@@ -29,7 +30,4 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-}
-
-#selected {
 }
