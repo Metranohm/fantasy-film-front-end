@@ -61,7 +61,7 @@ const ActorResults = ({actors, profile, setProfile}) => {
       )
       :
 
-      <p>Search for Actors to get started!</p>
+      <p></p>
     }
     </main>
   );

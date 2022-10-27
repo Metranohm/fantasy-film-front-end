@@ -3,8 +3,16 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  padding-top: 100px;
   list-style: none;
+  background-image: url("https://i.postimg.cc/N0mLTgty/Blue-Film-Strip.png");
 }
 
+.label,
+.button {
+  margin-right: 0.5rem;
+}
 
+.inputContainer {
+  margin-bottom: 1rem;
+}
