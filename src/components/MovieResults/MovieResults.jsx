@@ -108,9 +108,7 @@ const MovieResults = ({movies, profile, setProfile}) => {
     <main className={styles.container}>
       { movies.length ? 
         movies.map(movie => (
-          // if (movie.backdrop_path)
-          // return (
-            movie.backdrop_path &&
+            movie.poster_path &&
               <MovieCard 
               key={movie.id}
               movie={movie} 
@@ -118,11 +116,9 @@ const MovieResults = ({movies, profile, setProfile}) => {
               handleAddToFav={handleAddToFav}
               handleDeleteFromFav={handleDeleteFromFav}
               handleDreamCast={handleDreamCast}/> 
-            
-          // )
         ))
         :
-        <p>Please search</p>
+        <p></p>
       }
     </main>
   );

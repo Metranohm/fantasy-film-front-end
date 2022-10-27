@@ -69,8 +69,9 @@ const MovieDetails = ({ profile, setProfile }) => {
             className={styles.cast} 
             id={cast._id === selectedCast?._id ? styles.selected : ''}
             >
-              <p key={cast._id} className="card-text">{cast.character} : {cast.actor?.name}</p>
-              <button onClick={() => setSelectedCast(cast)}>Replace</button>
+              <p key={cast._id} className="card-text">{cast.character} : {cast.actor?.name}</p><br />
+              {!selectedCast &&
+              <button className="btn btn-danger" onClick={() => setSelectedCast(cast)}>Replace</button>}
             </div>
           ))}
         </div>

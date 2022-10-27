@@ -9,14 +9,15 @@
   overflow: scroll;
 }
 
-.container section{
+.container section {
   width: 50% !important;
   display: flex;
   flex-direction: column;
   /* justify-content: flex-start;
   align-items: center; */
   padding: 0 40px;
-
+  border: 1px solid red;
+  
 }
 
 .container section img {
@@ -30,6 +31,11 @@
   width: 100%;
   justify-content: space-between;
 }
-
-#selected {
+button{
+  position: relative;
+}
+p{
+  position: relative;
+  margin-bottom: 20x;
+  
 }

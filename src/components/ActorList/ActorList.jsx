@@ -1,29 +1,21 @@
-const styles = {
-  width: '20px',
-  height: '20px'
-}
+import styles from './ActorList.module.css'
 
 const ActorList = ({ actors, selectedCast, replaceActor }) => {
 
   if (actors.length > 0) {
     return (
-      <section>
-        <h1>Actor list component</h1>
+      <div id='actorList'className={styles.actorContainer}>
         {actors.map(actor =>
-          <div key={actor._id} className='card' style={{ 
-            'width': '12rem',
-            'display': 'flex',
-            '':''
-            }} >
+          <span key={actor._id}  className='card' style={{'width': '12rem',}} >
             <img styles={styles} src={actor?.photo} alt={`${actor.name}`} />
             <div className="card-body d-flex flex-column">
               <h3 className="card-title">{actor.name}</h3>
-              {selectedCast && <button onClick={()=> replaceActor(actor)}>Select</button>}
+              {selectedCast && <button className='btn btn-primary' onClick={()=> replaceActor(actor)}>Select</button>}
             </div>
-          </div>
+          </span>
         )}
-      </section>
-    );
+      </div>
+    )
   }
 
   return <h1>Loading Actors...</h1>
