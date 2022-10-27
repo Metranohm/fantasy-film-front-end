@@ -4,7 +4,6 @@ import * as profileService from '../../services/profileService'
 
 const Profiles = (profile) => {
   const [profiles, setProfiles] = useState([])
-  console.log(profiles)
   useEffect(() => {
     const fetchProfiles = async () => {
       const profileData = await profileService.getAllProfiles()
