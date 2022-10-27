@@ -79,7 +79,7 @@ const MovieResults = ({movies, profile, setProfile}) => {
           )
         })
         :
-        <p>Search for Movies to get started</p>
+        <p></p>
       }
     </main>
   );
