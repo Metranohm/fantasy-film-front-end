@@ -39,6 +39,7 @@ const ActorResults = ({actors, profile, setProfile}) => {
     }
   } 
 
+  if(!actors) return <h1>Loading Actors...</h1>
   return (  
     <main className={styles.container}>
     {actors.length ?

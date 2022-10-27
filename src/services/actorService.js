@@ -65,3 +65,14 @@ export async function deleteFav(actorData) {
     console.log(error);
   }
 }
+
+export async function index () {
+  try {
+    const res = await fetch(BASE_URL, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}

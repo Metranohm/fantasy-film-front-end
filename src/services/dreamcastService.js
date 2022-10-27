@@ -40,19 +40,34 @@ const create = async (dreamcastData) => {
   }
 }
 
-const update = async (dreamcastData) => {
+const update = async (dcId, castId, actorData) => {
   try {
-    const res = await fetch(`${BASE_URL}/${dreamcastData._id}`, {
+    const res = await fetch(`${BASE_URL}/${dcId}/cast/${castId}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(dreamcastData)
+      body: JSON.stringify({actor: actorData})
     })
     return res.json()
   } catch (error) {
     console.log(error)
+  }
+}
+
+export async function deleteDreamcast(movieID) {
+  try {
+    const res = await fetch(`${BASE_URL}/${movieID}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+    
+  } catch (error) {
+    console.log(error);
   }
 }
 

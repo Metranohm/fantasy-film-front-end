@@ -103,25 +103,26 @@ const MovieResults = ({movies, profile, setProfile}) => {
     }
   }
 
+  if(!movies) return <h1>Loading Movies...</h1>
   return ( 
     <main className={styles.container}>
       { movies.length ? 
-        movies.map( movie => {
-          if (movie.backdrop_path)
-          return (
-          
+        movies.map(movie => (
+          // if (movie.backdrop_path)
+          // return (
+            movie.backdrop_path &&
               <MovieCard 
-              key={movie._id}
+              key={movie.id}
               movie={movie} 
               favMovie={tmdbIDs}
               handleAddToFav={handleAddToFav}
               handleDeleteFromFav={handleDeleteFromFav}
               handleDreamCast={handleDreamCast}/> 
             
-          )
-        })
+          // )
+        ))
         :
-        <p></p>
+        <p>Please search</p>
       }
     </main>
   );
