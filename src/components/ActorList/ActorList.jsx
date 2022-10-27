@@ -10,7 +10,7 @@ const ActorList = ({ actors, selectedCast, replaceActor }) => {
             <img styles={styles} src={actor?.photo} alt={`${actor.name}`} />
             <div className="card-body d-flex flex-column">
               <h3 className="card-title">{actor.name}</h3>
-              {selectedCast && <button onClick={()=> replaceActor(actor)}>Select</button>}
+              {selectedCast && <button className='btn btn-primary' onClick={()=> replaceActor(actor)}>Select</button>}
             </div>
           </span>
         )}
