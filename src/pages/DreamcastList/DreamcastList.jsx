@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 // components
 // import Loading from "../Loading/Loading"
@@ -11,7 +11,6 @@ import styles from "./DreamcastList.module.css"
 import * as dreamcastService from "../../services/dreamcastService.js"
 
 const DreamcastDetails = ({user}) => {
-  const { id } = useParams()
   const [dreamcasts, setDreamcasts] = useState([])
 
   useEffect(() => {
@@ -40,7 +39,7 @@ const DreamcastDetails = ({user}) => {
                 </div>
               ))}
             </div>
-            {user.profile === dreamcast.author && <Link to={`/movies/${dreamcast._id}`}><button>View Details</button></Link>}
+            {user.profile === dreamcast.author && <Link to={`/movies/${dreamcast._id}`}><button className="btn btn-success">View Details</button></Link>}
             
           </div>
         ))}
